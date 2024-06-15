@@ -1,7 +1,6 @@
-build/
-dist/
-vcpkg_installed/
-.idea/
-include/steam/
-.vs/
-.vscode/
+.idea
+.vs
+.vscode/settings.json
+.vscode
+build
+cmake-build*
