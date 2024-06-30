@@ -143,27 +143,53 @@ namespace hooks
             case "ks_DragonMoonBlastALDUIN"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor, util::GetSoundRecord("VOCShoutDragon26BDaIiz"));
+                        util::playSound(actor, util::GetSoundRecord("VOCShoutDragon25BJiidViin"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, util::GetSoundRecord("VOCShoutDragonAlduin23BDaIiz"));
+                        util::playSound(actor, util::GetSoundRecord("VOCShoutDragonAlduin22BJiidViin"));
                     }
 
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor, util::GetSoundRecord("VOCShoutDragon26AGron"));
+                        util::playSound(actor, util::GetSoundRecord("VOCShoutDragon25ASos"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, util::GetSoundRecord("VOCShoutDragonAlduin23AGron"));
+                        util::playSound(actor, util::GetSoundRecord("VOCShoutDragonAlduin22ASos"));
                     }
                 }
                 break;
 
-            case "005SahloknirStormShout"_h:
+            case "005StormShoutsFROST"_h:
                 if (SpellFire){
-                    util::playSound(actor, util::GetSoundRecord("VOCShoutDragon15BSahDiin"));
+                    util::playSound(actor, util::GetSoundRecord("VOCShoutDragon24BSoDaan"));
                 }else{
-                    util::playSound(actor, util::GetSoundRecord("VOCShoutDragon15AFiik"));
+                    util::playSound(actor, util::GetSoundRecord("VOCShoutDragon24AJiid"));
+                }
+                break;
+
+            case "zz05AlduinFirestorms"_h:
+            case "dunCGDragonStormCallShout"_h:
+            case "MQ206AlduinFirestormShout"_h:
+                if (SpellFire){
+                    util::playSound(actor, util::GetSoundRecord("VOCShoutDragonAlduin08BToorNah"));
+                }else{
+                    util::playSound(actor, util::GetSoundRecord("VOCShoutDragonAlduin08AGaar"));
+                }
+                break;
+
+            case "zz005DevourSoul_Alduin"_h:
+                if (SpellFire){
+                    util::playSound(actor, util::GetSoundRecord("VOCShoutDragonAlduin19BDiiDu"));
+                }else{
+                    util::playSound(actor, util::GetSoundRecord("VOCShoutDragonAlduin19AZiiLos"));
+                }
+                break;
+
+            case "005StormShoutsSHOCK"_h:
+                if (SpellFire){
+                    util::playSound(actor, util::GetSoundRecord("VOCShoutDragon17BBahQo"));
+                }else{
+                    util::playSound(actor, util::GetSoundRecord("VOCShoutDragon17AStrun"));
                 }
                 break;
 
