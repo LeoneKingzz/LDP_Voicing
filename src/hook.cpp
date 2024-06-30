@@ -16,6 +16,10 @@ namespace hooks
 
         case "Voice_SpellFire_Event"_h:
 
+            RE::BGSSoundDescriptorForm *a_desc;
+
+            util::playSound(actor,a_desc);
+
             break;
 	
 		
