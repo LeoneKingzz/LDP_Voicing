@@ -621,5 +621,10 @@ public:
             soundHelper_c(&handle);
         }
     }
+
+    static RE::BGSSoundDescriptorForm* GetSoundRecord(const char* description){
+
+        return RE::BGSSoundDescriptorForm::LookupByEditorID(description)->As<RE::BGSSoundDescriptorForm>();
+    }
 };
 

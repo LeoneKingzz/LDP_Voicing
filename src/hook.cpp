@@ -2,21 +2,29 @@
 
 namespace hooks
 {
-    void on_animation_event::GetEquippedShout(RE::Actor *actor){
+    void on_animation_event::GetEquippedShout(RE::Actor *actor, bool SpellFire){
         auto limboshout = actor->GetActorRuntimeData().selectedPower;
-
-        
 
         if (limboshout && limboshout->Is(RE::FormType::Shout))
         {
+            bool IsActorTypeDragon = actor->HasKeywordString("DragonVoiceKey");
+            bool IsActorTypePaarthurnax = actor->HasKeywordString("MasterPaarthurnaxKey");
+            bool IsActorTypeAlduin = actor->HasKeywordString("AlduinUnitedKey");
+            bool IsActorTypeOdahviing = actor->HasKeywordString("OdahviingKey");
+
             std::string_view Lsht = limboshout->GetFormEditorID();
             switch (hash(Lsht.data(), Lsht.size()))
             {
             case "ks_DragonFlameWaveShoutALDUIN"_h:
-                /* code */
+                if (SpellFire){
+                    util::playSound(actor, util::GetSoundRecord("VOCShoutDragonAlduin04BTorShul"));
+                } else{
+                    util::playSound(actor, util::GetSoundRecord("VOCShoutDragonAlduin04AYol"));
+                }
                 break;
-            
-            default:
+
+            case "005SummonShouts"_h:
+                util::playSound(actor, util::GetSoundRecord("VOCShoutDragonAlduin05AYol"));
                 break;
             }
         }
@@ -44,9 +52,7 @@ namespace hooks
 
         case "Voice_SpellFire_Event"_h:
 
-            RE::BGSSoundDescriptorForm *a_desc;
-
-            util::playSound(actor,a_desc);
+            GetEquippedShout(actor, true);
 
             break;
 	
