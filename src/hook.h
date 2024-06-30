@@ -29,7 +29,7 @@ namespace hooks
 
 		static inline REL::Relocation<decltype(ProcessEvent_NPC)> _ProcessEvent_NPC;
 		static inline REL::Relocation<decltype(ProcessEvent_NPC)> _ProcessEvent_PC;
-	};
+    };
 	
 
 	inline void alloc() 
