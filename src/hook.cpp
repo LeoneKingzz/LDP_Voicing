@@ -9,9 +9,10 @@ namespace hooks
 
         if (limboshout && limboshout->Is(RE::FormType::Shout))
         {
-            switch (limboshout->GetFormEditorID())
+            std::string_view Lsht = limboshout->GetFormEditorID();
+            switch (hash(Lsht.data(), Lsht.size()))
             {
-            case /* constant-expression */:
+            case "ks_DragonFlameWaveShoutALDUIN"_h:
                 /* code */
                 break;
             
@@ -84,3 +85,9 @@ namespace hooks
 //     }
 //     caster->CastSpellImmediate(eldenArmorSpell, true, a_defender, 1, false, 45, a_defender);
 // }
+
+// const auto ActorTypeDragon = RE::BGSKeyword::LookupByEditorID("ActorTypeDragon")->As<RE::BGSKeyword>();
+// auto UDDragonAISpell = RE::TESForm::LookupByEditorID<RE::SpellItem>("aaaUDDragonAISpell");
+
+// bool IsActorTypeDragon = Dragon->HasKeyword(ActorTypeDragon);
+// bool HasUDDragonAISpell = Dragon->HasSpell(UDDragonAISpell);
