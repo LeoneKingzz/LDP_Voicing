@@ -5,11 +5,18 @@ namespace hooks
     void on_animation_event::GetEquippedShout(RE::Actor *actor){
         auto limboshout = actor->GetActorRuntimeData().selectedPower;
 
+        
+
         if (limboshout && limboshout->Is(RE::FormType::Shout))
         {
-            if (limboshout->As<RE::TESShout>()->variations->spell->avEffectSetting->data.flags.all(RE::EffectSetting::EffectSettingData::Flag::kHostile))
+            switch (limboshout->GetFormEditorID())
             {
-                
+            case /* constant-expression */:
+                /* code */
+                break;
+            
+            default:
+                break;
             }
         }
        
