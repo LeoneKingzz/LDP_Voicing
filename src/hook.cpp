@@ -873,11 +873,6 @@ namespace hooks
     }
 
 
-
-
-
-
-
 	void on_animation_event::ProcessEvent(RE::BSTEventSink<RE::BSAnimationGraphEvent>* a_sink, RE::BSAnimationGraphEvent* a_event, RE::BSTEventSource<RE::BSAnimationGraphEvent>* a_eventSource)
 	{
 		if (!a_event->holder) {
@@ -887,7 +882,7 @@ namespace hooks
 		RE::Actor* actor = const_cast<RE::TESObjectREFR*>(a_event->holder)->As<RE::Actor>();
 		switch (hash(eventTag.data(), eventTag.size())) {
         case "BeginCastVoice"_h:
-        
+
             GetEquippedShout(actor);
 
             break;
