@@ -887,6 +887,7 @@ namespace hooks
 		RE::Actor* actor = const_cast<RE::TESObjectREFR*>(a_event->holder)->As<RE::Actor>();
 		switch (hash(eventTag.data(), eventTag.size())) {
         case "BeginCastVoice"_h:
+        
             GetEquippedShout(actor);
 
             break;
