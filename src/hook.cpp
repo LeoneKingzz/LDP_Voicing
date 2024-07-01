@@ -880,19 +880,26 @@ namespace hooks
 		}
 		std::string_view eventTag = a_event->tag.data();
 		RE::Actor* actor = const_cast<RE::TESObjectREFR*>(a_event->holder)->As<RE::Actor>();
-		switch (hash(eventTag.data(), eventTag.size())) {
+        bool IsActorTypeDragon = actor->HasKeywordString("DragonVoiceKey");
+        bool IsActorTypePaarthurnax = actor->HasKeywordString("MasterPaarthurnaxKey");
+        bool IsActorTypeAlduin = actor->HasKeywordString("AlduinUnitedKey");
+        bool IsActorTypeOdahviing = actor->HasKeywordString("OdahviingKey");
+        switch (hash(eventTag.data(), eventTag.size())) {
         case "BeginCastVoice"_h:
 
-            GetEquippedShout(actor);
+            if (IsActorTypeDragon || IsActorTypeAlduin || IsActorTypeOdahviing || IsActorTypePaarthurnax){
+                GetEquippedShout(actor);
+            }
 
             break;
 
         case "Voice_SpellFire_Event"_h:
 
-            GetEquippedShout(actor, true);
+            if (IsActorTypeDragon || IsActorTypeAlduin || IsActorTypeOdahviing || IsActorTypePaarthurnax){
+                GetEquippedShout(actor, true);
+            }
 
             break;
-	
 		
 		}
 	}
