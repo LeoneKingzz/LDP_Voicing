@@ -889,6 +889,7 @@ namespace hooks
 
             if (IsActorTypeDragon || IsActorTypeAlduin || IsActorTypeOdahviing || IsActorTypePaarthurnax){
                 GetEquippedShout(actor);
+                logger::info("anim_event BeginCastVoice");
             }
 
             break;
@@ -897,6 +898,7 @@ namespace hooks
 
             if (IsActorTypeDragon || IsActorTypeAlduin || IsActorTypeOdahviing || IsActorTypePaarthurnax){
                 GetEquippedShout(actor, true);
+                logger::info("anim_event Voice_SpellFire_Event");
             }
 
             break;

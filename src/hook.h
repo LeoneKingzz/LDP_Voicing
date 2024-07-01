@@ -18,7 +18,7 @@ namespace hooks
 
 			_ProcessEvent_NPC = AnimEventVtbl_NPC.write_vfunc(0x1, ProcessEvent_NPC);
 			_ProcessEvent_PC = AnimEventVtbl_PC.write_vfunc(0x1, ProcessEvent_PC);
-			// logger::info("hook:on_animation_event");
+			logger::info("hook:on_animation_event");
 		}
         static void GetEquippedShout(RE::Actor *actor, bool SpellFire = false);
 
