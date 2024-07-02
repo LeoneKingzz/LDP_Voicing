@@ -75,8 +75,8 @@ namespace hooks
 		{
 			logger::info("starting voicing....");
 			//logger::info("record {} name {}"sv, a_descriptor, a_descriptor);
-			// RE::BGSSoundDescriptor *a_descriptor = RE::BGSSoundDescriptorForm::LookupByEditorID(description)->As<RE::BGSSoundDescriptor>();
-			auto formID = RE::TESForm::LookupByEditorID<RE::BGSSoundDescriptorForm>(description)->formID;
+			RE::BGSSoundDescriptorForm *a_descriptor = RE::BGSSoundDescriptorForm::LookupByEditorID(description)->As<RE::BGSSoundDescriptorForm>();
+			// auto formID = RE::TESForm::LookupByEditorID<RE::BGSSoundDescriptorForm>(description)->formID;
 			RE::BSSoundHandle handle;
 			handle.soundID = static_cast<uint32_t>(-1);
 			handle.assumeSuccess = false;
@@ -89,26 +89,26 @@ namespace hooks
 			}else{
 				logger::info("handle failed");
 			}
-			// if (a_descriptor){
-			// 	logger::info("descriptor check");
-			// }else{
-			// 	logger::info("descriptor failed");
-			// }
+			if (a_descriptor){
+				logger::info("descriptor check");
+			}else{
+				logger::info("descriptor failed");
+			}
 
 
-			if (formID){
+			if (a_descriptor->formID){
 				logger::info("formid check");
 			}else{
 				logger::info("formid failed");
 			}
 
-			if (formID){
+			if (a_descriptor->GetFormID()){
 				logger::info("formid functtion check");
 			}else{
 				logger::info("formid func failed");
 			}
 
-			soundHelper_a(RE::BSAudioManager::GetSingleton(), &handle, formID, 16);
+			soundHelper_a(RE::BSAudioManager::GetSingleton(), &handle, a_descriptor->formID, 16);
 			logger::info("2nd check pass");
 
 			if (set_sound_position(&handle, a->data.location.x, a->data.location.y, a->data.location.z))
