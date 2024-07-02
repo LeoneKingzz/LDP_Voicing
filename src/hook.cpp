@@ -2,6 +2,7 @@
 
 namespace hooks
 {
+    RE::TESForm;
     void on_animation_event::GetEquippedShout(RE::Actor *actor, bool SpellFire){
         auto limboshout = actor->GetActorRuntimeData().selectedPower;
 
@@ -13,6 +14,7 @@ namespace hooks
             bool IsActorTypeOdahviing = actor->HasKeywordString("OdahviingKey");
 
             std::string_view Lsht = limboshout->GetFormEditorID();
+            logger::info("Shout {} EDID {}"sv, actor->GetName(), Lsht);
             switch (hash(Lsht.data(), Lsht.size()))
             {
             case "ks_DragonFlameWaveShoutALDUIN"_h:
