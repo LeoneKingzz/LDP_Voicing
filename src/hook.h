@@ -71,7 +71,7 @@ namespace hooks
 		}
 
 	public:
-		static void playSound(RE::Actor *a, RE::BGSSoundDescriptorForm *a_descriptor)
+		static void playSound(RE::Actor *a, RE::BGSSoundDescriptor *a_descriptor)
 		{
 			logger::info("starting voicing....");
 			//logger::info("record {} name {}"sv, a_descriptor, a_descriptor);
@@ -119,10 +119,10 @@ namespace hooks
 			}
 		}
 
-		static RE::BGSSoundDescriptorForm *GetSoundRecord(const char* description)
+		static RE::BGSSoundDescriptor *GetSoundRecord(const char* description)
 		{
 
-			auto Ygr = RE::TESForm::LookupByEditorID<RE::BGSSoundDescriptorForm>(description);
+			auto Ygr = RE::TESForm::LookupByEditorID<RE::BGSSoundDescriptor>(description);
 
 			return Ygr;
 		}
