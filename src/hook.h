@@ -71,11 +71,11 @@ namespace hooks
 		}
 
 	public:
-		static void playSound(RE::Actor *a, const std::string_view &description)
+		static void playSound(RE::Actor *a, const char* description)
 		{
 			logger::info("starting voicing....");
 			//logger::info("record {} name {}"sv, a_descriptor, a_descriptor);
-			RE::BGSSoundDescriptor *a_descriptor = RE::BGSSoundDescriptorForm::LookupByEditorID(description)->As<RE::BGSSoundDescriptor>();
+			// RE::BGSSoundDescriptor *a_descriptor = RE::BGSSoundDescriptorForm::LookupByEditorID(description)->As<RE::BGSSoundDescriptor>();
 			auto formID = RE::TESForm::LookupByEditorID<RE::TESForm>(description)->formID;
 			RE::BSSoundHandle handle;
 			handle.soundID = static_cast<uint32_t>(-1);
@@ -89,11 +89,11 @@ namespace hooks
 			}else{
 				logger::info("handle failed");
 			}
-			if (a_descriptor){
-				logger::info("descriptor check");
-			}else{
-				logger::info("descriptor failed");
-			}
+			// if (a_descriptor){
+			// 	logger::info("descriptor check");
+			// }else{
+			// 	logger::info("descriptor failed");
+			// }
 
 
 			if (formID){
