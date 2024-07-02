@@ -76,7 +76,7 @@ namespace hooks
 			logger::info("starting voicing....");
 			//logger::info("record {} name {}"sv, a_descriptor, a_descriptor);
 			// RE::BGSSoundDescriptor *a_descriptor = RE::BGSSoundDescriptorForm::LookupByEditorID(description)->As<RE::BGSSoundDescriptor>();
-			auto formID = RE::TESForm::LookupByEditorID<RE::TESForm>(description)->formID;
+			auto formID = RE::TESForm::LookupByEditorID<RE::BGSSoundDescriptorForm>(description)->formID;
 			RE::BSSoundHandle handle;
 			handle.soundID = static_cast<uint32_t>(-1);
 			handle.assumeSuccess = false;
