@@ -122,16 +122,9 @@ namespace hooks
 		static RE::BGSSoundDescriptorForm *GetSoundRecord(const std::string_view &description)
 		{
 
-			if (RE::BGSSoundDescriptorForm::LookupByEditorID(description)->As<RE::BGSSoundDescriptorForm>())
-			{
-				logger::info("successful getsoundrecord");
-			}
-			else
-			{
-				logger::info("failed getsoundrecord");
-			}
+			auto Ygr = RE::TESForm::LookupByEditorID<RE::BGSSoundDescriptorForm>(description);
 
-			return RE::BGSSoundDescriptorForm::LookupByEditorID(description)->As<RE::BGSSoundDescriptorForm>();
+			return Ygr;
 		}
 	};
 };
