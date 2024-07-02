@@ -16,7 +16,8 @@ namespace hooks
             std::string_view Lsht = (clib_util::editorID::get_editorID(limboshout)).data();
             logger::info("Shout {} EDID {}"sv, actor->GetName(), Lsht);
             if (hash(Lsht.data(), Lsht.size())){
-                logger::info("successful process");
+                logger::info("DATA {} SIZE {}"sv, Lsht.data(), Lsht.size());
+                logger::info("HASH {} ACTOR {}"sv, hash(Lsht.data(), Lsht.size()), actor->GetName());
             }else{
                 logger::info("failed proccess");
             }
