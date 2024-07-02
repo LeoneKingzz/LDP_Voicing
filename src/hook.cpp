@@ -197,11 +197,13 @@ namespace hooks
             case "dunCGDragonStormCallShout"_h:
             case "MQ206AlduinFirestormShout"_h:
             case "005StormShoutsFIRE"_h:
+                logger::info("successful hash case switch");
                 if (SpellFire){
                     if (IsActorTypeDragon){
                         util::playSound(actor, util::GetSoundRecord("VOCShoutDragon20BToorNah"));
                     }
                     if (IsActorTypeAlduin){
+                        logger::info("ending shout");
                         util::playSound(actor, util::GetSoundRecord("VOCShoutDragonAlduin08BToorNah"));
                     }
                 }else{
@@ -209,6 +211,7 @@ namespace hooks
                         util::playSound(actor, util::GetSoundRecord("VOCShoutDragon20AGaar"));
                     }
                     if (IsActorTypeAlduin){
+                        logger::info("Starting shout");
                         util::playSound(actor, util::GetSoundRecord("VOCShoutDragonAlduin08AGaar"));
                     }
                 }
