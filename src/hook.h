@@ -71,7 +71,7 @@ namespace hooks
 		}
 
 	public:
-		static void playSound(RE::Actor *a, const char *description)
+		static void playSound(RE::Actor *a, const std::string_view &description)
 		{
 			logger::info("starting voicing....");
 			//logger::info("record {} name {}"sv, a_descriptor, a_descriptor);
