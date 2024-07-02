@@ -15,6 +15,11 @@ namespace hooks
 
             std::string_view Lsht = (clib_util::editorID::get_editorID(limboshout)).c_str();
             logger::info("Shout {} EDID {}"sv, actor->GetName(), Lsht);
+            if (hash(Lsht.data(), Lsht.size())){
+                logger::info("successful process");
+            }else{
+                logger::info("failed proccess");
+            }
             switch (hash(Lsht.data(), Lsht.size()))
             {
             case "ks_DragonFlameWaveShoutALDUIN"_h:

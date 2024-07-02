@@ -624,6 +624,15 @@ public:
 
     static RE::BGSSoundDescriptorForm* GetSoundRecord(const char* description){
 
+        if (RE::BGSSoundDescriptorForm::LookupByEditorID(description)->As<RE::BGSSoundDescriptorForm>())
+        {
+            logger::info("successful getsoundrecord");
+        }
+        else
+        {
+            logger::info("failed getsoundrecord");
+        }
+
         return RE::BGSSoundDescriptorForm::LookupByEditorID(description)->As<RE::BGSSoundDescriptorForm>();
     }
 };
