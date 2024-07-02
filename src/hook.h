@@ -82,6 +82,23 @@ namespace hooks
 
 			logger::info("1st check pass");
 
+			if (&handle){
+				logger::info("handle check");
+			}else{
+				logger::info("handle failed");
+			}
+			if (a_descriptor->formID){
+				logger::info("formid check");
+			}else{
+				logger::info("formid failed");
+			}
+
+			if (a_descriptor->GetFormID()){
+				logger::info("formid functtion check");
+			}else{
+				logger::info("formid func failed");
+			}
+
 			soundHelper_a(RE::BSAudioManager::GetSingleton(), &handle, a_descriptor->formID, 16);
 			logger::info("2nd check pass");
 
