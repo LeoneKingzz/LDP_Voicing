@@ -87,6 +87,13 @@ namespace hooks
 			}else{
 				logger::info("handle failed");
 			}
+			if (a_descriptor){
+				logger::info("descriptor check");
+			}else{
+				logger::info("descriptor failed");
+			}
+
+
 			if (a_descriptor->formID){
 				logger::info("formid check");
 			}else{
