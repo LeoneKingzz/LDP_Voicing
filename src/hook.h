@@ -73,6 +73,7 @@ namespace hooks
 	public:
 		static void playSound(RE::Actor *a, RE::BGSSoundDescriptorForm *a_descriptor)
 		{
+			logger::info("starting voicing....");
 			RE::BSSoundHandle handle;
 			handle.soundID = static_cast<uint32_t>(-1);
 			handle.assumeSuccess = false;
@@ -83,6 +84,7 @@ namespace hooks
 			{
 				soundHelper_b(&handle, a->Get3D());
 				soundHelper_c(&handle);
+				logger::info("voicing complete");
 			}
 		}
 
