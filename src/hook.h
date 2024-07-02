@@ -74,15 +74,22 @@ namespace hooks
 		static void playSound(RE::Actor *a, RE::BGSSoundDescriptorForm *a_descriptor)
 		{
 			logger::info("starting voicing....");
+			//logger::info("record {} name {}"sv, a_descriptor, a_descriptor);
 			RE::BSSoundHandle handle;
 			handle.soundID = static_cast<uint32_t>(-1);
 			handle.assumeSuccess = false;
 			*(uint32_t *)&handle.state = 0;
 
-			soundHelper_a(RE::BSAudioManager::GetSingleton(), &handle, a_descriptor->GetFormID(), 16);
+			logger::info("1st check pass");
+
+			soundHelper_a(RE::BSAudioManager::GetSingleton(), &handle, a_descriptor->formID, 16);
+			logger::info("2nd check pass");
+
 			if (set_sound_position(&handle, a->data.location.x, a->data.location.y, a->data.location.z))
 			{
+				logger::info("3rd check pass");
 				soundHelper_b(&handle, a->Get3D());
+				logger::info("4th check pass");
 				soundHelper_c(&handle);
 				logger::info("voicing complete");
 			}
