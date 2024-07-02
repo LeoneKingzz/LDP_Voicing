@@ -71,11 +71,12 @@ namespace hooks
 		}
 
 	public:
-		static void playSound(RE::Actor *a, std::string description)
+		static void playSound(RE::Actor *a, const char* description)
 		{
 			logger::info("starting voicing....");
 			//logger::info("record {} name {}"sv, a_descriptor, a_descriptor);
-			RE::BGSSoundDescriptorForm *a_descriptor = RE::BGSSoundDescriptorForm::LookupByEditorID(description)->As<RE::BGSSoundDescriptorForm>();
+			auto Yandler = RE::TESDataHandler::GetSingleton();
+			RE::BGSSoundDescriptorForm *a_descriptor = RE::TESForm::LookupByEditorID(description)->As<RE::BGSSoundDescriptorForm>();
 			// auto formID = RE::TESForm::LookupByEditorID<RE::BGSSoundDescriptorForm>(description)->formID;
 			RE::BSSoundHandle handle;
 			handle.soundID = static_cast<uint32_t>(-1);
