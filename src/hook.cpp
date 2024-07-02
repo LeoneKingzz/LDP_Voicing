@@ -13,6 +13,13 @@ namespace hooks
             bool IsActorTypeAlduin = actor->HasKeywordString("AlduinUnitedKey");
             bool IsActorTypeOdahviing = actor->HasKeywordString("OdahviingKey");
 
+            if (!(IsActorTypeDragon || IsActorTypeAlduin || IsActorTypeOdahviing || IsActorTypePaarthurnax)){
+                logger::info("failed");
+                return;
+            }else{
+                logger::info("DragonCheck passed");
+            }
+
             std::string_view Lsht = (clib_util::editorID::get_editorID(limboshout)).data();
             logger::info("Shout {} EDID {}"sv, actor->GetName(), Lsht);
             if (hash(Lsht.data(), Lsht.size())){
@@ -888,26 +895,18 @@ namespace hooks
 		}
 		std::string_view eventTag = a_event->tag.data();
 		RE::Actor* actor = const_cast<RE::TESObjectREFR*>(a_event->holder)->As<RE::Actor>();
-        bool IsActorTypeDragon = actor->HasKeywordString("DragonVoiceKey");
-        bool IsActorTypePaarthurnax = actor->HasKeywordString("MasterPaarthurnaxKey");
-        bool IsActorTypeAlduin = actor->HasKeywordString("AlduinUnitedKey");
-        bool IsActorTypeOdahviing = actor->HasKeywordString("OdahviingKey");
         switch (hash(eventTag.data(), eventTag.size())) {
         case "BeginCastVoice"_h:
 
-            if (IsActorTypeDragon || IsActorTypeAlduin || IsActorTypeOdahviing || IsActorTypePaarthurnax){
-                GetEquippedShout(actor);
-                logger::info("anim_event BeginCastVoice");
-            }
+            GetEquippedShout(actor);
+            logger::info("anim_event BeginCastVoice");
 
             break;
 
         case "Voice_SpellFire_Event"_h:
 
-            if (IsActorTypeDragon || IsActorTypeAlduin || IsActorTypeOdahviing || IsActorTypePaarthurnax){
-                GetEquippedShout(actor, true);
-                logger::info("anim_event Voice_SpellFire_Event");
-            }
+            GetEquippedShout(actor, true);
+            logger::info("anim_event Voice_SpellFire_Event");
 
             break;
 		
