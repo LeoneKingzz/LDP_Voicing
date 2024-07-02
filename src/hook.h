@@ -71,7 +71,7 @@ namespace hooks
 		}
 
 	public:
-		static void playSound(RE::Actor *a, RE::BGSSoundDescriptor *a_descriptor)
+		static void playSound(RE::Actor *a, RE::TESForm *a_descriptor)
 		{
 			logger::info("starting voicing....");
 			//logger::info("record {} name {}"sv, a_descriptor, a_descriptor);
@@ -98,7 +98,7 @@ namespace hooks
 			}
 
 
-			if (a_descriptor->alternateSoundFormID){
+			if (a_descriptor->GetFormID()){
 				logger::info("formid check");
 			}else{
 				logger::info("formid failed");
@@ -110,7 +110,7 @@ namespace hooks
 			// 	logger::info("formid func failed");
 			// }
 
-			soundHelper_a(RE::BSAudioManager::GetSingleton(), &handle, a_descriptor->alternateSoundFormID, 16);
+			soundHelper_a(RE::BSAudioManager::GetSingleton(), &handle, a_descriptor->GetFormID(), 16);
 			logger::info("2nd check pass");
 
 			if (set_sound_position(&handle, a->data.location.x, a->data.location.y, a->data.location.z))
