@@ -1,5 +1,6 @@
 #include "SKSE/Trampoline.h"
 #include "util.h"
+#include "editorID.hpp"
 #pragma warning(disable: 4100)
 
 
