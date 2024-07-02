@@ -13,7 +13,7 @@ namespace hooks
             bool IsActorTypeAlduin = actor->HasKeywordString("AlduinUnitedKey");
             bool IsActorTypeOdahviing = actor->HasKeywordString("OdahviingKey");
 
-            std::string_view Lsht = (clib_util::editorID::get_editorID(limboshout)).c_str();
+            std::string_view Lsht = (clib_util::editorID::get_editorID(limboshout)).data();
             logger::info("Shout {} EDID {}"sv, actor->GetName(), Lsht);
             if (hash(Lsht.data(), Lsht.size())){
                 logger::info("successful process");
