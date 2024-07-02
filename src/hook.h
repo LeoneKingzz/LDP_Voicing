@@ -119,7 +119,7 @@ namespace hooks
 			}
 		}
 
-		static RE::BGSSoundDescriptorForm *GetSoundRecord(const std::string_view &description)
+		static RE::BGSSoundDescriptorForm *GetSoundRecord(const char* description)
 		{
 
 			auto Ygr = RE::TESForm::LookupByEditorID<RE::BGSSoundDescriptorForm>(description);
