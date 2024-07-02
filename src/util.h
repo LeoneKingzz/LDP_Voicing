@@ -622,7 +622,7 @@ public:
         }
     }
 
-    static RE::BGSSoundDescriptorForm* GetSoundRecord(const char* description){
+    static RE::BGSSoundDescriptorForm* GetSoundRecord(const std::string_view &description){
 
         if (RE::BGSSoundDescriptorForm::LookupByEditorID(description)->As<RE::BGSSoundDescriptorForm>())
         {
