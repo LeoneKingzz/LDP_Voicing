@@ -14,21 +14,9 @@ namespace hooks
             bool IsActorTypeAlduin = actor->HasKeywordString("AlduinUnitedKey");
             bool IsActorTypeOdahviing = actor->HasKeywordString("OdahviingKey");
 
-            if (!(IsActorTypeDragon || IsActorTypeAlduin || IsActorTypeOdahviing || IsActorTypePaarthurnax)){
-                logger::info("failed");
-                return;
-            }else{
-                logger::info("DragonCheck passed");
-            }
-
             std::string_view Lsht = (clib_util::editorID::get_editorID(limboshout)).data();
             logger::info("Shout {} EDID {}"sv, actor->GetName(), Lsht);
-            if (hash(Lsht.data(), Lsht.size())){
-                logger::info("DATA {} SIZE {}"sv, Lsht.data(), Lsht.size());
-                logger::info("HASH {} ACTOR {}"sv, hash(Lsht.data(), Lsht.size()), actor->GetName());
-            }else{
-                logger::info("failed proccess");
-            }
+            
             switch (hash(Lsht.data(), Lsht.size()))
             {
             case "ks_DragonFlameWaveShoutALDUIN"_h:
@@ -198,13 +186,11 @@ namespace hooks
             case "dunCGDragonStormCallShout"_h:
             case "MQ206AlduinFirestormShout"_h:
             case "005StormShoutsFIRE"_h:
-                logger::info("successful hash case switch");
                 if (SpellFire){
                     if (IsActorTypeDragon){
                         util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x859, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeAlduin){
-                        logger::info("ending shout");
                         util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x8A8, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                 }else{
@@ -212,7 +198,6 @@ namespace hooks
                         util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x858, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeAlduin){
-                        logger::info("Starting shout");
                         util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x8A7, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                 }
@@ -267,16 +252,16 @@ namespace hooks
                     
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon19AVen", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x836, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonAlduin15AVen", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x8B5, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonOdahviing15AVen", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x88F, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonPaarthurnax12AVen", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x8DE, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                 }
                 break;
@@ -286,32 +271,32 @@ namespace hooks
             case "ks_DragonDrainVitalityShoutODAH"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon08BLahHaas", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x820, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonAlduin14BLahHaas", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x8B4, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonOdahviing14BLahHaas", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x88E, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon08AGaan", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x81F, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonAlduin14AGaan", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x8B3, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonOdahviing14AGaan", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x88D, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                 }
                 break;
 
             case "KS_DLC2BendWillShout_Alduin"_h:
                 if (SpellFire){
-                    util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonAlduin11BHahDov", "Dragons shout with voice - KS2 Patch.esp")));
+                    util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0xA81, "Dragons shout with voice - KS2 Patch.esp")));
                 }else{
-                    util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonAlduin11AGol", "Dragons shout with voice - KS2 Patch.esp")));
+                    util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x8AD, "Dragons shout with voice - KS2 Patch.esp")));
                 }
                 break;
 
@@ -321,30 +306,30 @@ namespace hooks
             case "Serio_EDR_GravityBlastShoutPAAR"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon12BFusGaar", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x828, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonAlduin11BFusGaar", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x8AE, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonOdahviing11BFusGaar", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x888, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonPaarthurnax10BFusGaar", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x8DB, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon12AGol", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x827, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonAlduin11AGol", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x8AD, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonOdahviing11AGol", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x887, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonPaarthurnax10AGol", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x8DA, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                 }
                 break;
@@ -355,30 +340,30 @@ namespace hooks
             case "Serio_EDR_BackfireRecoilShoutPAAR"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon13BFiikZun", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x82A, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonAlduin10BFiikZun", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x8AC, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonOdahviing10BFiikZun", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x886, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonPaarthurnax09BFiikZun", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x8D9, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon13AQah", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x829, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonAlduin10AQah", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x8AB, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonOdahviing10AQah", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x885, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonPaarthurnax09AQah", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x8D8, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                 }
                 break;
@@ -389,30 +374,30 @@ namespace hooks
             case "ks_DragonBecomeEtherealShoutPAAR"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon18BZiiGron", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x834, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonAlduin07BZiiGron", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x8A6, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonOdahviing07BZiiGron", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x880, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonPaarthurnax07BZiiGron", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x8D5, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon18AFeim", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x833, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonAlduin07AFeim", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x8A5, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonOdahviing07AFeim", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x87F, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonPaarthurnax07AFeim", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x8D4, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                 }
                 break;
@@ -428,30 +413,30 @@ namespace hooks
             case "ks_DragonUnrelentingForceAreaShoutPAAR"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon01BRoDah", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x16E53, "Skyrim.esm")));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonAlduin01BRoDah", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x10FF06, "Skyrim.esm")));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonOdahviing01BRoDah", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x874, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonPaarthurnax01BRoDah", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x16E27, "Skyrim.esm")));
                     }
                     
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon01AFus", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x16E50, "Skyrim.esm")));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonAlduin01AFus", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x10FF05, "Skyrim.esm")));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonOdahviing01AFus", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x873, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonPaarthurnax01AFus", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x16E26, "Skyrim.esm")));
                     }
                 }
                 break;
@@ -462,30 +447,30 @@ namespace hooks
             case "ks_DragonDismayAreaShoutPAAR"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon02BRuMaar", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x16E69, "Skyrim.esm")));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonAlduin02BRuMaar", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x10FF04, "Skyrim.esm")));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonOdahviing02BRuMaar", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x876, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonPaarthurnax02BRuMaar", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x16E29, "Skyrim.esm")));
                     }
                     
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon02AFaas", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x16E59, "Skyrim.esm")));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonAlduin02AFaas", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x10FF03, "Skyrim.esm")));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonOdahviing02AFaas", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x875, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonPaarthurnax02AFaas", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x16E28, "Skyrim.esm")));
                     }
                 }
                 break;
@@ -500,30 +485,30 @@ namespace hooks
             case "005FrostForgetShoutsPAAR"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon03BSlenNus", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x16E6F, "Skyrim.esm")));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonAlduin03BSlenNus", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x10FF02, "Skyrim.esm")));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonOdahviing03BSlenNus", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x878, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonPaarthurnax03BSlenNus", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x16E3C, "Skyrim.esm")));
                     }
                     
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon03AIiz", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x16E6B, "Skyrim.esm")));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonAlduin03AIiz", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x10FF01, "Skyrim.esm")));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonOdahviing03AIiz", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x877, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonPaarthurnax03AIiz", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x16E2A, "Skyrim.esm")));
                     }
                 }
                 break;
@@ -534,30 +519,30 @@ namespace hooks
             case "ks_DragonDisarmShoutPAAR"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon04BHaalViik", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x16E7A, "Skyrim.esm")));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonAlduin04BHaalViik", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x10FF00, "Skyrim.esm")));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonOdahviing04BHaalViik", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x87A, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonPaarthurnax04BHaalViik", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x16E44, "Skyrim.esm")));
                     }
                     
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon04AZun", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x16E79, "Skyrim.esm")));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonAlduin04AZun", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x10FEFF, "Skyrim.esm")));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonOdahviing04AZun", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x879, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonPaarthurnax04AZun", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x16E3D, "Skyrim.esm")));
                     }
                 }
                 break;
@@ -575,30 +560,30 @@ namespace hooks
             case "ks_DragonFlameWaveShoutPAAR"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon05BTorShul", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x16ED0, "Skyrim.esm")));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonAlduin05BTorShul", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x10F563, "Skyrim.esm")));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonOdahviing05BToorShul", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x87C, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonPaarthurnax05BTorShul", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x16E4E, "Skyrim.esm")));
                     }
                     
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon05AYol", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x16E91, "Skyrim.esm")));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonAlduin05AYol", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x10F562, "Skyrim.esm")));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonOdahviing05AYol", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x87B, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonPaarthurnax05AYol", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x16E46, "Skyrim.esm")));
                     }
                 }
                 break;
@@ -613,30 +598,30 @@ namespace hooks
             case "L_DragonFrostIceStormShoutPAAR"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon06BKrahDiin", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x81B, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonAlduin06BKrahDiin", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x8A4, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonOdahviing06BKrahDiin", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x87E, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonPaarthurnax06BKrahDiin", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x8D3, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon06AFo", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x81A, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonAlduin06AFo", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x8A3, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonOdahviing06AFo", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x87D, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonPaarthurnax06AFo", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x8D2, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                 }
                 break;
@@ -647,30 +632,30 @@ namespace hooks
             case "Serio_EDR_ChainSuppressionShoutPAAR"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon11BLahMey", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x826, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonAlduin09BLahMey", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x8AA, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonOdahviing09BLahMey", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x884, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonPaarthurnax08BLahMey", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x8D7, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon11AHah", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x825, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonAlduin09AHah", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x8A9, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonOdahviing09AHah", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x883, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonPaarthurnax08AHah", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x8D6, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                 }
                 break;
@@ -681,30 +666,30 @@ namespace hooks
             case "Serio_EDR_StaggerSpikesShoutPAAR"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon10BKriidGol", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x824, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonAlduin12BKriidGol", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x8B0, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonOdahviing12BKriidGol", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x88A, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonPaarthurnax11BKriidGol", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x8DD, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon10AKlo", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x823, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonAlduin12AKlo", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x8AF, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonOdahviing12AKlo", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x889, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonPaarthurnax11AKlo", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x8DC, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                 }
                 break;
@@ -717,23 +702,23 @@ namespace hooks
             case "Serio_EDR_MarkedForDeathShoutODAH"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon14BLunAus", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x82C, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonAlduin13BLunAus", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x8B2, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonOdahviing13BLunAus", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x88C, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon14AKrii", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x82B, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonAlduin13AKrii", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x8B1, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonOdahviing13AKrii", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x88B, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                 }
                 break;
@@ -744,17 +729,17 @@ namespace hooks
             case "L_DragonShockBallShoutALDUIN2"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon16BAgSlen", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x830, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonAlduin16BAgSlen", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x8B8, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon16ASov", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x82F, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonAlduin16ASov", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x8B7, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                 }
                 break;
@@ -763,17 +748,17 @@ namespace hooks
             case "ks_DragonSoulTearShout_ALDUIN"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon09BVaazZol", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x822, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonAlduin17BVaazZol", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x8BA, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon09ARii", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x821, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonAlduin17ARii", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x8B9, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                 }
                 break;
@@ -783,56 +768,56 @@ namespace hooks
             case "Serio_EDR_DevourMoonLightShoutODAH"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon21BKunShaan", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x8C9, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonAlduin20BKunShaan", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x8C0, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonOdahviing16BKunShaan", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x8C6, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon21ADu", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x8C8, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonAlduin20ADu", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x8BF, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonOdahviing16ADu", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x8C5, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                 }
                 break;
 
             case "005StormShoutsALLD"_h:
                 if (SpellFire){
-                    util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon22BVaazDaan", "Dragons shout with voice - KS2 Patch.esp")));
+                    util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x8CB, "Dragons shout with voice - KS2 Patch.esp")));
                 }else{
-                    util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon22AVul", "Dragons shout with voice - KS2 Patch.esp")));
+                    util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x8CA, "Dragons shout with voice - KS2 Patch.esp")));
                 }
                 break;
 
             case "Serio_EDR_StormBarrageShout"_h:
                 if (SpellFire){
-                    util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon23BVulVu", "Dragons shout with voice - KS2 Patch.esp")));
+                    util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x8CD, "Dragons shout with voice - KS2 Patch.esp")));
                 }else{
-                    util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon23ASul", "Dragons shout with voice - KS2 Patch.esp")));
+                    util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x8CC, "Dragons shout with voice - KS2 Patch.esp")));
                 }
                 break;
 
             case "PaarthurnaxClearSkies"_h:
                 if (SpellFire){
-                    util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonPaarthurnax15BVahKoor", "Dragons shout with voice - KS2 Patch.esp")));
+                    util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x8E5, "Dragons shout with voice - KS2 Patch.esp")));
                 }else{
-                    util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonPaarthurnax15ALok", "Dragons shout with voice - KS2 Patch.esp")));
+                    util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x8E4, "Dragons shout with voice - KS2 Patch.esp")));
                 }
                 break;
 
             case "PaarthurnaxBattleFury"_h:
                 if (SpellFire){
-                    util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonPaarthurnax19BVurShaan", "Dragons shout with voice - KS2 Patch.esp")));
+                    util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x90D, "Dragons shout with voice - KS2 Patch.esp")));
                 }else{
-                    util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonPaarthurnax19AMid", "Dragons shout with voice - KS2 Patch.esp")));
+                    util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x90C, "Dragons shout with voice - KS2 Patch.esp")));
                 }
                 break;
 
@@ -840,17 +825,17 @@ namespace hooks
             case "005ShockForgetShoutsALDUIN"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon28BBahRein", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x8F5, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonAlduin25BBahRein", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x8FB, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon28AMul", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x8F4, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonAlduin25AMul", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x8FA, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                 }
                 break;
@@ -861,30 +846,30 @@ namespace hooks
             case "005FireForgetShoutsPAAR"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon29BVolAg", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x90B, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonAlduin26BVolAg", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x909, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonOdahviing19BVolAg", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x905, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonPaarthurnax18BVolAg", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x907, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragon29AToor", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x90A, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonAlduin26AToor", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x908, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonOdahviing19AToor", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>(0x904, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor,(data->LookupForm<RE::BGSSoundDescriptorForm>("VOCShoutDragonPaarthurnax18AToor", "Dragons shout with voice - KS2 Patch.esp")));
+                        util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x906, "Dragons shout with voice - KS2 Patch.esp")));
                     }
                 }
                 break;
@@ -904,15 +889,17 @@ namespace hooks
         switch (hash(eventTag.data(), eventTag.size())) {
         case "BeginCastVoice"_h:
 
-            GetEquippedShout(actor);
             logger::info("anim_event BeginCastVoice");
+
+            GetEquippedShout(actor);
 
             break;
 
         case "Voice_SpellFire_Event"_h:
 
-            GetEquippedShout(actor, true);
             logger::info("anim_event Voice_SpellFire_Event");
+
+            GetEquippedShout(actor, true);
 
             break;
 		
