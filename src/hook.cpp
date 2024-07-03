@@ -32,41 +32,41 @@ namespace hooks
             {
             case "ks_DragonFlameWaveShoutALDUIN"_h:
                 if (SpellFire){
-                    util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin04BTorShul"));
+                    actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin04BTorShul"));
                 } else{
-                    util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin04AYol"));
+                    actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin04AYol"));
                 }
                 break;
 
             case "005SummonShouts"_h:
                 if (SpellFire){
-                    util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon07BQothZaam"));
+                    actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon07BQothZaam"));
                 } else{
-                    util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon07ADiil"));
+                    actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon07ADiil"));
                 }
                 break;
 
             case "005StormShoutsDECIEVE"_h:
                 if (SpellFire){
-                    util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon15BLoSah"));
+                    actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon15BLoSah"));
                 }else{
-                    util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon15AFiik"));
+                    actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon15AFiik"));
                 }
                 break;
 
             case "005SahloknirStormShout"_h:
                 if (SpellFire){
-                    util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon15BSahDiin"));
+                    actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon15BSahDiin"));
                 }else{
-                    util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon15AFiik"));
+                    actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon15AFiik"));
                 }
                 break;
 
             case "005StormShoutsBLOOD"_h:
                 if (SpellFire){
-                    util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon30BSosHaas"));
+                    actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon30BSosHaas"));
                 }else{
-                    util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon30ALun"));
+                    actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon30ALun"));
                 }
                 break;
             
@@ -76,30 +76,30 @@ namespace hooks
             case "005UniqueBreathShoutsPAAR"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon27BYolRon"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon27BYolRon"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin24BYolRon"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin24BYolRon"));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonOdahviing18BYolRon"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonOdahviing18BYolRon"));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonPaarthurnax17BYolRon"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonPaarthurnax17BYolRon"));
                     }
                     
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon27AVah"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon27AVah"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin24AVah"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin24AVah"));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonOdahviing18AVah"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonOdahviing18AVah"));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonPaarthurnax17AVah"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonPaarthurnax17AVah"));
                     }
                 }
                 break;
@@ -110,47 +110,47 @@ namespace hooks
             case "005VolleyBreathShoutsPAAR"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon26BDaIiz"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon26BDaIiz"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin23BDaIiz"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin23BDaIiz"));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonOdahviing17BDaIiz"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonOdahviing17BDaIiz"));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonPaarthurnax16BDaIiz"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonPaarthurnax16BDaIiz"));
                     }
                     
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon26AGron"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon26AGron"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin23AGron"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin23AGron"));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonOdahviing17AGron"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonOdahviing17AGron"));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonPaarthurnax16AGron"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonPaarthurnax16AGron"));
                     }
                 }
                 break;
 
             case "PaarthurnaxElementalFury"_h:
                 if (SpellFire){
-                    util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonPaarthurnax14BGrahDun"));
+                    actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonPaarthurnax14BGrahDun"));
                 }else{
-                    util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonPaarthurnax14ASu"));
+                    actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonPaarthurnax14ASu"));
                 }
                 break;
 
             case "PaarthurnaxWhirlwindTempest"_h:
                 if (SpellFire){
-                    util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonPaarthurnax13BNahKest"));
+                    actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonPaarthurnax13BNahKest"));
                 }else{
-                    util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonPaarthurnax13AWuld"));
+                    actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonPaarthurnax13AWuld"));
                 }
                 break;
 
@@ -158,18 +158,18 @@ namespace hooks
             case "ks_DragonMoonBlastALDUIN"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon25BJiidViin"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon25BJiidViin"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin22BJiidViin"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin22BJiidViin"));
                     }
 
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon25ASos"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon25ASos"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin22ASos"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin22ASos"));
                     }
                 }
                 break;
@@ -178,17 +178,17 @@ namespace hooks
             case "zz005AlduinFroststorms"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon24BSoDaan"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon24BSoDaan"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin21BSoDaan"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin21BSoDaan"));
                     }
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon24AJiid"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon24AJiid"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin21AJiid"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin21AJiid"));
                     }
                 }
                 break;
@@ -200,28 +200,30 @@ namespace hooks
                 logger::info("successful hash case switch");
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon20BToorNah"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon20BToorNah"));
                     }
                     if (IsActorTypeAlduin){
                         logger::info("ending shout");
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin08BToorNah"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin08BToorNah"));
                     }
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon20AGaar"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon20AGaar"));
                     }
                     if (IsActorTypeAlduin){
                         logger::info("Starting shout");
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin08AGaar"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin08AGaar"));
                     }
                 }
                 break;
 
+                RE::BShkbAnimationGraph;
+
             case "zz005DevourSoul_Alduin"_h:
                 if (SpellFire){
-                    util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin19BDiiDu"));
+                    actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin19BDiiDu"));
                 }else{
-                    util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin19AZiiLos"));
+                    actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin19AZiiLos"));
                 }
                 break;
 
@@ -229,17 +231,17 @@ namespace hooks
             case "zz005AlduinLightningstorms"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon17BBahQo"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon17BBahQo"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin18BBahQo"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin18BBahQo"));
                     }
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon17AStrun"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon17AStrun"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin18AStrun"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin18AStrun"));
                     }
                 }
                 break;
@@ -250,30 +252,30 @@ namespace hooks
             case "ks_DragonCycloneShoutPAAR"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon19BGaarNos"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon19BGaarNos"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin15BGaarNos"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin15BGaarNos"));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonOdahviing15BGaarNos"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonOdahviing15BGaarNos"));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonPaarthurnax12BGaarNos"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonPaarthurnax12BGaarNos"));
                     }
                     
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon19AVen"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon19AVen"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin15AVen"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin15AVen"));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonOdahviing15AVen"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonOdahviing15AVen"));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonPaarthurnax12AVen"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonPaarthurnax12AVen"));
                     }
                 }
                 break;
@@ -283,32 +285,32 @@ namespace hooks
             case "ks_DragonDrainVitalityShoutODAH"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon08BLahHaas"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon08BLahHaas"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin14BLahHaas"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin14BLahHaas"));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonOdahviing14BLahHaas"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonOdahviing14BLahHaas"));
                     }
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon08AGaan"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon08AGaan"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin14AGaan"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin14AGaan"));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonOdahviing14AGaan"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonOdahviing14AGaan"));
                     }
                 }
                 break;
 
             case "KS_DLC2BendWillShout_Alduin"_h:
                 if (SpellFire){
-                    util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin11BHahDov"));
+                    actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin11BHahDov"));
                 }else{
-                    util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin11AGol"));
+                    actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin11AGol"));
                 }
                 break;
 
@@ -318,30 +320,30 @@ namespace hooks
             case "Serio_EDR_GravityBlastShoutPAAR"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon12BFusGaar"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon12BFusGaar"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin11BFusGaar"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin11BFusGaar"));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonOdahviing11BFusGaar"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonOdahviing11BFusGaar"));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonPaarthurnax10BFusGaar"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonPaarthurnax10BFusGaar"));
                     }
                     
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon12AGol"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon12AGol"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin11AGol"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin11AGol"));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonOdahviing11AGol"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonOdahviing11AGol"));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonPaarthurnax10AGol"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonPaarthurnax10AGol"));
                     }
                 }
                 break;
@@ -352,30 +354,30 @@ namespace hooks
             case "Serio_EDR_BackfireRecoilShoutPAAR"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon13BFiikZun"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon13BFiikZun"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin10BFiikZun"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin10BFiikZun"));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonOdahviing10BFiikZun"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonOdahviing10BFiikZun"));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonPaarthurnax09BFiikZun"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonPaarthurnax09BFiikZun"));
                     }
                     
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon13AQah"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon13AQah"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin10AQah"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin10AQah"));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonOdahviing10AQah"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonOdahviing10AQah"));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonPaarthurnax09AQah"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonPaarthurnax09AQah"));
                     }
                 }
                 break;
@@ -386,30 +388,30 @@ namespace hooks
             case "ks_DragonBecomeEtherealShoutPAAR"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon18BZiiGron"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon18BZiiGron"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin07BZiiGron"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin07BZiiGron"));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonOdahviing07BZiiGron"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonOdahviing07BZiiGron"));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonPaarthurnax07BZiiGron"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonPaarthurnax07BZiiGron"));
                     }
                     
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon18AFeim"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon18AFeim"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin07AFeim"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin07AFeim"));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonOdahviing07AFeim"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonOdahviing07AFeim"));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonPaarthurnax07AFeim"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonPaarthurnax07AFeim"));
                     }
                 }
                 break;
@@ -425,30 +427,30 @@ namespace hooks
             case "ks_DragonUnrelentingForceAreaShoutPAAR"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon01BRoDah"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon01BRoDah"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin01BRoDah"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin01BRoDah"));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonOdahviing01BRoDah"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonOdahviing01BRoDah"));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonPaarthurnax01BRoDah"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonPaarthurnax01BRoDah"));
                     }
                     
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon01AFus"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon01AFus"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin01AFus"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin01AFus"));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonOdahviing01AFus"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonOdahviing01AFus"));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonPaarthurnax01AFus"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonPaarthurnax01AFus"));
                     }
                 }
                 break;
@@ -459,30 +461,30 @@ namespace hooks
             case "ks_DragonDismayAreaShoutPAAR"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon02BRuMaar"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon02BRuMaar"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin02BRuMaar"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin02BRuMaar"));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonOdahviing02BRuMaar"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonOdahviing02BRuMaar"));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonPaarthurnax02BRuMaar"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonPaarthurnax02BRuMaar"));
                     }
                     
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon02AFaas"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon02AFaas"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin02AFaas"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin02AFaas"));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonOdahviing02AFaas"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonOdahviing02AFaas"));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonPaarthurnax02AFaas"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonPaarthurnax02AFaas"));
                     }
                 }
                 break;
@@ -497,30 +499,30 @@ namespace hooks
             case "005FrostForgetShoutsPAAR"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon03BSlenNus"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon03BSlenNus"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin03BSlenNus"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin03BSlenNus"));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonOdahviing03BSlenNus"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonOdahviing03BSlenNus"));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonPaarthurnax03BSlenNus"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonPaarthurnax03BSlenNus"));
                     }
                     
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon03AIiz"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon03AIiz"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin03AIiz"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin03AIiz"));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonOdahviing03AIiz"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonOdahviing03AIiz"));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonPaarthurnax03AIiz"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonPaarthurnax03AIiz"));
                     }
                 }
                 break;
@@ -531,30 +533,30 @@ namespace hooks
             case "ks_DragonDisarmShoutPAAR"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon04BHaalViik"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon04BHaalViik"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin04BHaalViik"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin04BHaalViik"));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonOdahviing04BHaalViik"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonOdahviing04BHaalViik"));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonPaarthurnax04BHaalViik"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonPaarthurnax04BHaalViik"));
                     }
                     
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon04AZun"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon04AZun"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin04AZun"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin04AZun"));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonOdahviing04AZun"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonOdahviing04AZun"));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonPaarthurnax04AZun"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonPaarthurnax04AZun"));
                     }
                 }
                 break;
@@ -572,30 +574,30 @@ namespace hooks
             case "ks_DragonFlameWaveShoutPAAR"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon05BTorShul"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon05BTorShul"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin05BTorShul"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin05BTorShul"));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonOdahviing05BToorShul"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonOdahviing05BToorShul"));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonPaarthurnax05BTorShul"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonPaarthurnax05BTorShul"));
                     }
                     
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon05AYol"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon05AYol"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin05AYol"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin05AYol"));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonOdahviing05AYol"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonOdahviing05AYol"));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonPaarthurnax05AYol"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonPaarthurnax05AYol"));
                     }
                 }
                 break;
@@ -610,30 +612,30 @@ namespace hooks
             case "L_DragonFrostIceStormShoutPAAR"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon06BKrahDiin"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon06BKrahDiin"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin06BKrahDiin"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin06BKrahDiin"));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonOdahviing06BKrahDiin"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonOdahviing06BKrahDiin"));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonPaarthurnax06BKrahDiin"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonPaarthurnax06BKrahDiin"));
                     }
                     
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon06AFo"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon06AFo"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin06AFo"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin06AFo"));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonOdahviing06AFo"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonOdahviing06AFo"));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonPaarthurnax06AFo"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonPaarthurnax06AFo"));
                     }
                 }
                 break;
@@ -644,30 +646,30 @@ namespace hooks
             case "Serio_EDR_ChainSuppressionShoutPAAR"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon11BLahMey"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon11BLahMey"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin09BLahMey"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin09BLahMey"));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonOdahviing09BLahMey"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonOdahviing09BLahMey"));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonPaarthurnax08BLahMey"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonPaarthurnax08BLahMey"));
                     }
                     
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon11AHah"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon11AHah"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin09AHah"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin09AHah"));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonOdahviing09AHah"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonOdahviing09AHah"));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonPaarthurnax08AHah"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonPaarthurnax08AHah"));
                     }
                 }
                 break;
@@ -678,30 +680,30 @@ namespace hooks
             case "Serio_EDR_StaggerSpikesShoutPAAR"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon10BKriidGol"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon10BKriidGol"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin12BKriidGol"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin12BKriidGol"));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonOdahviing12BKriidGol"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonOdahviing12BKriidGol"));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonPaarthurnax11BKriidGol"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonPaarthurnax11BKriidGol"));
                     }
                     
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon10AKlo"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon10AKlo"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin12AKlo"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin12AKlo"));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonOdahviing12AKlo"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonOdahviing12AKlo"));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonPaarthurnax11AKlo"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonPaarthurnax11AKlo"));
                     }
                 }
                 break;
@@ -714,23 +716,23 @@ namespace hooks
             case "Serio_EDR_MarkedForDeathShoutODAH"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon14BLunAus"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon14BLunAus"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin13BLunAus"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin13BLunAus"));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonOdahviing13BLunAus"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonOdahviing13BLunAus"));
                     }
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon14AKrii"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon14AKrii"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin13AKrii"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin13AKrii"));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonOdahviing13AKrii"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonOdahviing13AKrii"));
                     }
                 }
                 break;
@@ -741,17 +743,17 @@ namespace hooks
             case "L_DragonShockBallShoutALDUIN2"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon16BAgSlen"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon16BAgSlen"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin16BAgSlen"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin16BAgSlen"));
                     }
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon16ASov"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon16ASov"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin16ASov"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin16ASov"));
                     }
                 }
                 break;
@@ -760,17 +762,17 @@ namespace hooks
             case "ks_DragonSoulTearShout_ALDUIN"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon09BVaazZol"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon09BVaazZol"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin17BVaazZol"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin17BVaazZol"));
                     }
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon09ARii"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon09ARii"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin17ARii"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin17ARii"));
                     }
                 }
                 break;
@@ -780,56 +782,56 @@ namespace hooks
             case "Serio_EDR_DevourMoonLightShoutODAH"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon21BKunShaan"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon21BKunShaan"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin20BKunShaan"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin20BKunShaan"));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonOdahviing16BKunShaan"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonOdahviing16BKunShaan"));
                     }
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon21ADu"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon21ADu"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin20ADu"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin20ADu"));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonOdahviing16ADu"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonOdahviing16ADu"));
                     }
                 }
                 break;
 
             case "005StormShoutsALLD"_h:
                 if (SpellFire){
-                    util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon22BVaazDaan"));
+                    actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon22BVaazDaan"));
                 }else{
-                    util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon22AVul"));
+                    actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon22AVul"));
                 }
                 break;
 
             case "Serio_EDR_StormBarrageShout"_h:
                 if (SpellFire){
-                    util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon23BVulVu"));
+                    actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon23BVulVu"));
                 }else{
-                    util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon23ASul"));
+                    actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon23ASul"));
                 }
                 break;
 
             case "PaarthurnaxClearSkies"_h:
                 if (SpellFire){
-                    util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonPaarthurnax15BVahKoor"));
+                    actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonPaarthurnax15BVahKoor"));
                 }else{
-                    util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonPaarthurnax15ALok"));
+                    actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonPaarthurnax15ALok"));
                 }
                 break;
 
             case "PaarthurnaxBattleFury"_h:
                 if (SpellFire){
-                    util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonPaarthurnax19BVurShaan"));
+                    actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonPaarthurnax19BVurShaan"));
                 }else{
-                    util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonPaarthurnax19AMid"));
+                    actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonPaarthurnax19AMid"));
                 }
                 break;
 
@@ -837,17 +839,17 @@ namespace hooks
             case "005ShockForgetShoutsALDUIN"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon28BBahRein"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon28BBahRein"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin25BBahRein"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin25BBahRein"));
                     }
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon28AMul"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon28AMul"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin25AMul"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin25AMul"));
                     }
                 }
                 break;
@@ -858,30 +860,30 @@ namespace hooks
             case "005FireForgetShoutsPAAR"_h:
                 if (SpellFire){
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon29BVolAg"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon29BVolAg"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin26BVolAg"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin26BVolAg"));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonOdahviing19BVolAg"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonOdahviing19BVolAg"));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonPaarthurnax18BVolAg"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonPaarthurnax18BVolAg"));
                     }
                     
                 }else{
                     if (IsActorTypeDragon){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragon29AToor"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragon29AToor"));
                     }
                     if (IsActorTypeAlduin){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonAlduin26AToor"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonAlduin26AToor"));
                     }
                     if (IsActorTypeOdahviing){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonOdahviing19AToor"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonOdahviing19AToor"));
                     }
                     if (IsActorTypePaarthurnax){
-                        util::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>("VOCShoutDragonPaarthurnax18AToor"));
+                        actor->NotifyAnimationGraph(("SoundPlay.VOCShoutDragonPaarthurnax18AToor"));
                     }
                 }
                 break;
@@ -953,3 +955,7 @@ namespace hooks
 
 // bool IsActorTypeDragon = Dragon->HasKeyword(ActorTypeDragon);
 // bool HasUDDragonAISpell = Dragon->HasSpell(UDDragonAISpell);
+
+// uti/l::playSound(actor, RE::TESForm::LookupByEditorID<RE::TESForm>
+
+//Actors\\Character
