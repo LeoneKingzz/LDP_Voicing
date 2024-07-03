@@ -15,7 +15,7 @@ namespace hooks
             bool IsActorTypeOdahviing = actor->HasKeywordString("OdahviingKey");
 
             std::string_view Lsht = (clib_util::editorID::get_editorID(limboshout)).data();
-            logger::info("Shout {} EDID {}"sv, actor->GetName(), Lsht);
+            logger::info("Actor {} Shout {}"sv, actor->GetName(), Lsht);
             
             switch (hash(Lsht.data(), Lsht.size()))
             {

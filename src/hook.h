@@ -86,6 +86,7 @@ namespace hooks
 			{
 				soundHelper_b(&handle, a->Get3D());
 				soundHelper_c(&handle);
+				logger::info("EDID {}"sv, clib_util::editorID::get_editorID(a_descriptor));
 				logger::info("voicing complete");
 			}
 		}
