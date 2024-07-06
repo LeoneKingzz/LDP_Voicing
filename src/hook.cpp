@@ -15,7 +15,7 @@ namespace hooks
             bool IsActorTypeOdahviing = actor->HasKeywordString("OdahviingKey");
 
             std::string_view Lsht = (clib_util::editorID::get_editorID(limboshout)).data();
-            logger::info("Actor {} Shout {}"sv, actor->GetName(), Lsht);
+            //logger::info("Actor {} Shout {}"sv, actor->GetName(), Lsht);
             
             switch (hash(Lsht.data(), Lsht.size()))
             {
@@ -202,8 +202,6 @@ namespace hooks
                     }
                 }
                 break;
-
-                RE::BShkbAnimationGraph;
 
             case "zz005DevourSoul_Alduin"_h:
                 if (SpellFire){
@@ -889,7 +887,7 @@ namespace hooks
         switch (hash(eventTag.data(), eventTag.size())) {
         case "BeginCastVoice"_h:
 
-            logger::info("anim_event BeginCastVoice");
+            //logger::info("anim_event BeginCastVoice");
 
             GetEquippedShout(actor);
 
@@ -897,7 +895,7 @@ namespace hooks
 
         case "Voice_SpellFire_Event"_h:
 
-            logger::info("anim_event Voice_SpellFire_Event");
+            //logger::info("anim_event Voice_SpellFire_Event");
 
             GetEquippedShout(actor, true);
 
@@ -912,11 +910,11 @@ namespace hooks
 		return _ProcessEvent_NPC(a_sink, a_event, a_eventSource);
 	}
 
-	EventResult on_animation_event::ProcessEvent_PC(RE::BSTEventSink<RE::BSAnimationGraphEvent>* a_sink, RE::BSAnimationGraphEvent* a_event, RE::BSTEventSource<RE::BSAnimationGraphEvent>* a_eventSource)
-	{
-		ProcessEvent(a_sink, a_event, a_eventSource);
-		return _ProcessEvent_PC(a_sink, a_event, a_eventSource);
-	}
+	// EventResult on_animation_event::ProcessEvent_PC(RE::BSTEventSink<RE::BSAnimationGraphEvent>* a_sink, RE::BSAnimationGraphEvent* a_event, RE::BSTEventSource<RE::BSAnimationGraphEvent>* a_eventSource)
+	// {
+	// 	ProcessEvent(a_sink, a_event, a_eventSource);
+	// 	return _ProcessEvent_PC(a_sink, a_event, a_eventSource);
+	// }
 
 }
 
