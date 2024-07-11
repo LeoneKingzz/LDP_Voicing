@@ -556,6 +556,7 @@ namespace hooks
             case "L_DragonFrostBreathShout"_h:
             case "L_DragonFrostIceStormShout"_h:
             case "005BlueDragonVoiceDragonFrost01"_h:
+            case "005AncientDragonFrost01"_h:
                 if (SpellFire){
                     util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x81B, "Dragons shout with voice - KS2 Patch.esp")));
                 }else{
