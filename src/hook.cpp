@@ -839,6 +839,14 @@ namespace hooks
                 }
                 break;
 
+            case "005SandAshBreath01"_h:
+                if (SpellFire){
+                    util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0xA92, "Dragons shout with voice - KS2 Patch.esp")));  
+                }else{
+                    util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0xA91, "Dragons shout with voice - KS2 Patch.esp")));
+                }
+                break;
+
             default:
             
                 break;
