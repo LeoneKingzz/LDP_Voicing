@@ -60,6 +60,7 @@ namespace hooks
                 break;
             
             case "005UniqueBreathShouts"_h:
+            case "005GoldenFireballConcSpell06"_h:
                 if (SpellFire){
                     util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x8F3, "Dragons shout with voice - KS2 Patch.esp")));     
                 }else{
@@ -93,6 +94,8 @@ namespace hooks
                 break;
 
             case "005VolleyBreathShouts"_h:
+            case "005DragonIceStormConcSpell02"_h:
+            case "005DragonIceStormConcSpell03"_h:
                 if (SpellFire){
                     util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x8F1, "Dragons shout with voice - KS2 Patch.esp")));
                 }else{
