@@ -550,6 +550,7 @@ namespace hooks
 
             case "L_DragonFrostBreathShout"_h:
             case "L_DragonFrostIceStormShout"_h:
+            case "005BlueDragonVoiceDragonFrost01"_h:
                 if (SpellFire){
                     util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x81B, "Dragons shout with voice - KS2 Patch.esp")));
                 }else{
@@ -677,6 +678,8 @@ namespace hooks
 
             case "L_DragonShockBreathShout"_h:
             case "L_DragonShockBallShout"_h:
+            case "005YellowDragonVoiceDragonLightningBreath01"_h:
+            case "005StormDragonVoiceDragonLightningBreath01"_h:
                 if (SpellFire){
                     util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x830, "Dragons shout with voice - KS2 Patch.esp")));
                 }else{
@@ -810,6 +813,20 @@ namespace hooks
                     util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x907, "Dragons shout with voice - KS2 Patch.esp")));  
                 }else{
                     util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x906, "Dragons shout with voice - KS2 Patch.esp")));
+                }
+                break;
+
+            case "005GreenDragonVoiceDragonPoisonBreath01B"_h:
+            case "005BronzeDragonPoisonBreath01"_h:
+            case "005PinkPoisonBreath01"_h:
+            case "005PurplePoisonBreath03"_h:
+            case "005PurplePoisonBreath07"_h:
+            case "005PurplePoisonBreath06"_h:
+            case "005ApoGreenPoisonBreath60"_h:
+                if (SpellFire){
+                    util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0xA8F, "Dragons shout with voice - KS2 Patch.esp")));  
+                }else{
+                    util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0xA8E, "Dragons shout with voice - KS2 Patch.esp")));
                 }
                 break;
 
