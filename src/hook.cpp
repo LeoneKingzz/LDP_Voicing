@@ -512,6 +512,11 @@ namespace hooks
             case "L_DragonFireBreathShoutDRAGON"_h:
             case "L_DragonFireBallShout"_h:
             case "ks_DragonFlameWaveShout"_h:
+            case "005InfernoDragonVoiceDragonFire05"_h:
+            case "005BlackDragonVoiceDragonFire01a"_h:
+            case "005AncientDragonFire01"_h:
+            case "005HighRedDragonVoiceDragonFire05"_h:
+            case "005GoldDragonVoiceDragonFire"_h:
                 if (SpellFire){
                     util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x16ED0, "Skyrim.esm")));   
                 }else{
