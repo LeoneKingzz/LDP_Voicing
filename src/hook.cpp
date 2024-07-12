@@ -865,6 +865,49 @@ namespace hooks
                 }
                 break;
 
+            case "005DragonWindBlastConcSpell01"_h:
+            case "005DragonTornadeConcSpell01"_h:
+                if (SpellFire){
+                    util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0xA98, "Dragons shout with voice - KS2 Patch.esp")));  
+                }else{
+                    util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0xA97, "Dragons shout with voice - KS2 Patch.esp")));
+                }
+                break;
+
+            case "005SerpentDragonMassParryzeConc"_h:
+                if (SpellFire){
+                    util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0xA9A, "Dragons shout with voice - KS2 Patch.esp")));  
+                }else{
+                    util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0xA99, "Dragons shout with voice - KS2 Patch.esp")));
+                }
+                break;
+
+            case "005DragonGreatWaterBallConcSpell05"_h:
+                if (SpellFire){
+                    util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0xA9C, "Dragons shout with voice - KS2 Patch.esp")));  
+                }else{
+                    util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0xA9B, "Dragons shout with voice - KS2 Patch.esp")));
+                }
+                break;
+
+            case "005DragonRockballConcSpell01"_h:
+            case "005DragonSandballConcSpell01"_h:
+                if (SpellFire){
+                    util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0xA9E, "Dragons shout with voice - KS2 Patch.esp")));  
+                }else{
+                    util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0xA9D, "Dragons shout with voice - KS2 Patch.esp")));
+                }
+                break;
+
+            case "005DragonPoisonballConcSpell01"_h:
+            case "005DragonAcidballConcSpell01"_h:
+                if (SpellFire){
+                    util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0xAA0, "Dragons shout with voice - KS2 Patch.esp")));  
+                }else{
+                    util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0xA9F, "Dragons shout with voice - KS2 Patch.esp")));
+                }
+                break;
+
             default:
             
                 break;
