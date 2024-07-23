@@ -908,6 +908,22 @@ namespace hooks
                 }
                 break;
 
+            case "KS_MistofSouls_Alduin"_h:
+                if (SpellFire){
+                    util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0xAC5, "Dragons shout with voice - KS2 Patch.esp")));  
+                }else{
+                    util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0xAC4, "Dragons shout with voice - KS2 Patch.esp")));
+                }
+                break;
+
+            case "KS_SlowTime_Alduin"_h:
+                if (SpellFire){
+                    util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0xAC7, "Dragons shout with voice - KS2 Patch.esp")));  
+                }else{
+                    util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0xAC6, "Dragons shout with voice - KS2 Patch.esp")));
+                }
+                break;
+
             default:
             
                 break;
