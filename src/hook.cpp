@@ -21,13 +21,15 @@ namespace hooks
             {
             case "ks_DragonFlameWaveShoutALDUIN"_h:
                 if (SpellFire){
-                    if (util::GetSingleton()->GenerateRandomFloat(0.0, 1.0) <= 0.3f){
+                    if (util::GetSingleton()->EnragedfireBreath){
+                        util::GetSingleton()->EnragedfireBreath = false;
                         util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x8A0, "Dragons shout with voice - KS2 Patch.esp")));
                     }else{
                         util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x10F563, "Skyrim.esm")));
                     }
                 } else{
                     if (util::GetSingleton()->GenerateRandomFloat(0.0, 1.0) <= 0.3f){
+                        util::GetSingleton()->EnragedfireBreath = true;
                         util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0xA8C, "Dragons shout with voice - KS2 Patch.esp")));
                     }else{
                         util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x10F562, "Skyrim.esm")));
@@ -539,13 +541,15 @@ namespace hooks
             case "L_DragonFireBreathShoutALDUIN2"_h:
             case "L_DragonFireBallShoutALDUIN2"_h:
                 if (SpellFire){
-                    if (util::GetSingleton()->GenerateRandomFloat(0.0, 1.0) <= 0.3f){
+                    if (util::GetSingleton()->EnragedfireBreath){
+                        util::GetSingleton()->EnragedfireBreath = false;
                         util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x8A0, "Dragons shout with voice - KS2 Patch.esp")));
                     }else{
                         util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x10F563, "Skyrim.esm")));
                     }
                 } else{
                     if (util::GetSingleton()->GenerateRandomFloat(0.0, 1.0) <= 0.3f){
+                        util::GetSingleton()->EnragedfireBreath = true;
                         util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0xA8C, "Dragons shout with voice - KS2 Patch.esp")));
                     }else{
                         util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x10F562, "Skyrim.esm")));
