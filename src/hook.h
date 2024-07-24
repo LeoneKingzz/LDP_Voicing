@@ -113,8 +113,6 @@ namespace hooks
 			std::uniform_real_distribution<float> dist(value_a, value_b);
 			return dist(generator);
 		}
-
-		static inline bool EnragedfireBreath;
 	};
 };
 
