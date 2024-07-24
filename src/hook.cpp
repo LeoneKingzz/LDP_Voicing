@@ -10,7 +10,6 @@ namespace hooks
         {
             auto data = RE::TESDataHandler::GetSingleton();
             auto Lahy = util::GetSingleton();
-            bool bLDP_IsAlduinEnrangedFire = false;
             // bool IsActorTypeDragon = actor->HasKeywordString("DragonVoiceKey");
             // bool IsActorTypePaarthurnax = actor->HasKeywordString("MasterPaarthurnaxKey");
             // bool IsActorTypeAlduin = actor->HasKeywordString("AlduinUnitedKey");
