@@ -28,7 +28,7 @@ namespace hooks
                         util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x10F563, "Skyrim.esm")));
                     }
                 } else{
-                    if (util::GetSingleton()->GenerateRandomFloat(0.0, 1.0) <= 0.3f){
+                    if (util::GetSingleton()->GenerateRandomFloat(0.0, 1.0) <= 0.5f){
                         util::GetSingleton()->EnragedfireBreath = true;
                         util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0xA8C, "Dragons shout with voice - KS2 Patch.esp")));
                     }else{
@@ -548,7 +548,7 @@ namespace hooks
                         util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x10F563, "Skyrim.esm")));
                     }
                 } else{
-                    if (util::GetSingleton()->GenerateRandomFloat(0.0, 1.0) <= 0.3f){
+                    if (util::GetSingleton()->GenerateRandomFloat(0.0, 1.0) <= 0.5f){
                         util::GetSingleton()->EnragedfireBreath = true;
                         util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0xA8C, "Dragons shout with voice - KS2 Patch.esp")));
                     }else{
