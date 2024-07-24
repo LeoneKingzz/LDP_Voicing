@@ -174,6 +174,7 @@ namespace hooks
                 break;
 
             case "zz05AlduinFirestorms"_h:
+            case "zz05AlduinFirestormsSERIO"_h:
             case "dunCGDragonStormCallShout"_h:
             case "MQ206AlduinFirestormShout"_h:
                 if (SpellFire){
