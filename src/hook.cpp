@@ -9,6 +9,7 @@ namespace hooks
         if (limboshout && limboshout->Is(RE::FormType::Shout))
         {
             auto data = RE::TESDataHandler::GetSingleton();
+            auto Lahy = util::GetSingleton();
             // bool IsActorTypeDragon = actor->HasKeywordString("DragonVoiceKey");
             // bool IsActorTypePaarthurnax = actor->HasKeywordString("MasterPaarthurnaxKey");
             // bool IsActorTypeAlduin = actor->HasKeywordString("AlduinUnitedKey");
@@ -20,7 +21,6 @@ namespace hooks
             switch (hash(Lsht.data(), Lsht.size()))
             {
             case "ks_DragonFlameWaveShoutALDUIN"_h:
-                auto Lahy = util::GetSingleton();
                 if (SpellFire){
                     if (Lahy->EnragedfireBreath){
                         Lahy->EnragedfireBreath = false;
@@ -541,7 +541,6 @@ namespace hooks
 
             case "L_DragonFireBreathShoutALDUIN2"_h:
             case "L_DragonFireBallShoutALDUIN2"_h:
-                auto Lahy = util::GetSingleton();
                 if (SpellFire){
                     if (Lahy->EnragedfireBreath){
                         Lahy->EnragedfireBreath = false;
