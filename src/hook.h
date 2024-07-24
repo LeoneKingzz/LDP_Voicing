@@ -114,7 +114,7 @@ namespace hooks
 			return dist(generator);
 		}
 
-		bool EnragedfireBreath = false;
+		static inline bool EnragedfireBreath;
 	};
 };
 
