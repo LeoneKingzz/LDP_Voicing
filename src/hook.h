@@ -70,6 +70,8 @@ namespace hooks
 			return func(a1, x, y, z);
 		}
 
+		std::random_device rd;
+
 	public:
 		static void playSound(RE::Actor *a, RE::BGSSoundDescriptorForm *a_descriptor)
 		{
@@ -97,6 +99,19 @@ namespace hooks
 			auto Ygr = RE::TESForm::LookupByEditorID<RE::BGSSoundDescriptor>(description);
 
 			return Ygr;
+		}
+
+		static util *GetSingleton()
+		{
+			static util singleton;
+			return &singleton;
+		}
+
+		float GenerateRandomFloat(float value_a, float value_b)
+		{
+			std::mt19937 generator(rd());
+			std::uniform_real_distribution<float> dist(value_a, value_b);
+			return dist(generator);
 		}
 	};
 };
