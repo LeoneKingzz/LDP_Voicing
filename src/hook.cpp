@@ -22,7 +22,7 @@ namespace hooks
             {
             case "ks_DragonFlameWaveShoutALDUIN"_h:
                 if (SpellFire){
-                    if (Lahy->EnragedfireBreath){
+                    if (&Lahy->EnragedfireBreath){
                         Lahy->EnragedfireBreath = false;
                         util::playSound(actor, (data->LookupForm<RE::BGSSoundDescriptorForm>(0x8A0, "Dragons shout with voice - KS2 Patch.esp")));
                     }else{
